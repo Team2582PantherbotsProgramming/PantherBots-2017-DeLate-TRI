@@ -13,6 +13,8 @@
 #define _ROBOT_H
 
 #include "WPILib.h"
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/core/core.hpp>
 #include "Commands/Command.h"
 #include "RobotMap.h"
 #include "LiveWindow/LiveWindow.h"
@@ -53,6 +55,7 @@ public:
 	virtual void TeleopInit();
 	virtual void TeleopPeriodic();
 	virtual void TestPeriodic();
+	virtual void VisionThread();
 
 
 	frc::Preferences* prefs;
